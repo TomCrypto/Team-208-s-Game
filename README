@@ -1,0 +1,51 @@
+                                ================
+                                [game name here]
+                                ================
+
+                          300237231 -- Marc Sykes
+                          300232221 -- Nainesh Patel
+                          300222967 -- Nick McNeil
+                          301018891 -- Patrick Mumford
+                          300250968 -- Thomas Beneteau
+
+Usage Instructions
+==================
+
+Server
+------
+
+To run the game server, execute the following command:
+
+    ./server.sh server.xml
+
+Or, alternatively:
+
+    java -jar game.jar --server server.xml
+
+Where `server.xml` is the name of the server configuration file (note a default
+configuration file is provided). If no file is given, will assume `server.xml`.
+
+A detailed event log will be produced in the `log.html` file.
+
+Client
+------
+
+To run the game client, execute the following command:
+
+    ./client.sh
+
+Or, alternatively (for Windows, use "windows" instead of "linux"):
+
+    java -Djava.library.path=lib/lwjgl/native/linux/ -jar game.jar
+
+You can select the server's hostname/IP and port at the login screen.
+
+Saving & Loading
+================
+
+The server will save the entire world state along with each player's last known
+position, and inventory, and will restore it when the player rejoins the server
+with the same name (players are identified by their login name) - no state will
+be saved on the client side, so this is similar in design to how MMO's work.
+
+(anything else we might want to put in here for the interview)
